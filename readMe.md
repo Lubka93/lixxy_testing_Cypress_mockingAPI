@@ -4,6 +4,8 @@ API and UI automation test for Lixxy web application.
 
 Test are written using Cypress as a main automation tool.
 
+Tests are written based on test cases: [Test Cases](https://docs.google.com/spreadsheets/d/1ixtZ-fux_l208mbLaBe9wyO3U_2epDF_/edit?usp=sharing&ouid=112772196783359617351&rtpof=true&sd=true)
+
 ## Running Cypress Tests Locally
 ### Prerequisites
 Ensure you have the following installed on your system:

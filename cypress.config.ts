@@ -14,7 +14,7 @@ const path = require("path"); //for file path
 
 export default defineConfig({
   retries: {            // for flaky tests .. based on the run/open mode it will GLOBALLY try to run test 2 or 3 times
-    runMode: 0,
+    runMode: 2,
     openMode:0,
   },
   e2e: {

@@ -13,7 +13,7 @@ describe('Search functionality', () => {
 
     it('&000001 - Verify correct API response with valid data (num of results over 100)', () => {
         const title = 'titanic';
-       // cy.intercept('GET', `https://api.themoviedb.org/3/search/movie?api_key=afbf7cca056ce2daed661a5d429faeeb&language=en-US&query=${title}&page=1`).as('Data01');
+       cy.intercept('GET', `https://api.themoviedb.org/3/search/movie?api_key=afbf7cca056ce2daed661a5d429faeeb&language=en-US&query=${title}&page=1`).as('Data01');
         cy.request('GET', `https://api.themoviedb.org/3/search/movie?api_key=afbf7cca056ce2daed661a5d429faeeb&language=en-US&query=${title}&page=1`).then((response) => {
             const requestLength = response.body.results.length;
             cy.wrap(requestLength).as('reqLength');
@@ -45,7 +45,7 @@ describe('Search functionality', () => {
     });
     it('&000002 - Verify correct API response with valid data (UPPERCASE) (num of results over 100)', () => {
         const title = 'TITANIC';
-        
+        cy.intercept('GET', `https://api.themoviedb.org/3/search/movie?api_key=afbf7cca056ce2daed661a5d429faeeb&language=en-US&query=${title}&page=1`).as('Data01');
         cy.request('GET', `https://api.themoviedb.org/3/search/movie?api_key=afbf7cca056ce2daed661a5d429faeeb&language=en-US&query=${title}&page=1`).then((response) => {
             const requestLength = response.body.results.length;
             cy.wrap(requestLength).as('reqLength');
@@ -77,7 +77,7 @@ describe('Search functionality', () => {
         });
     });
 
-    it.only('&000003 - Verify correct API response with invalid empty search input', () => {
+    it('&000003 - Verify correct API response with invalid empty search input', () => {
         const title = ' ';
        
         cy.request('GET', `https://api.themoviedb.org/3/search/movie?api_key=afbf7cca056ce2daed661a5d429faeeb&language=en-US&query=${title}&page=1`).then((response) => {
