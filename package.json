@@ -1,0 +1,30 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Cypress",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser chrome  cypress/e2e/search_functionality.cy.ts",
+    "runnerNotH": "cypress run --browser chrome   --spec cypress/e2e/search_functionality.cy.ts",
+    "runnerDesc": "cypress run --browser chrome --headed --spec cypress/e2e/search_functionality.cy.ts --record --key 3688b276-9635-4b7a-8c1d-10fc32844a83"
+  },
+  "author": "Lubka K",
+  "license": "MIT",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "@cypress/xpath": "^2.0.3",
+    "@testing-library/cypress": "^10.0.1",
+    "@types/cypress": "^1.1.3",
+    "@types/testing-library__cypress": "^5.0.13",
+    "cy-verify-downloads": "^0.2.3",
+    "cypress": "^13.7.3",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-real-events": "^1.12.0",
+    "cypress-xpath": "^2.0.1",
+    "mysql2": "^3.10.2",
+    "node-xlsx": "^0.24.0",
+    "typescript": "^5.4.3",
+    "xlsx": "^0.20.2"
+  }
+}
